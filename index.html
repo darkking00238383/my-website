@@ -1,0 +1,974 @@
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#092d20">
+<title>کسرا درب مرند گستر | تولید و عرضه انواع درب</title>
+<meta name="description" content="کسرا درب مرند گستر؛ ارائه انواع درب ضدسرقت، ضدحریق و درب‌های مدرن ساختمانی.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #123e2b;
+  --green2: #23724d;
+  --lime: #c6e56c;
+  --black: #101512;
+  --white: #fff;
+  --muted: #68736b;
+  --bg: #f5f7f3;
+  --line: #e5e9e2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: var(--bg);
+  color: var(--black);
+  line-height: 1.9;
+}
+a { text-decoration: none; color: inherit; }
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.container { width: min(1160px, 92%); margin: auto; }
+
+.topbar {
+  background: var(--black);
+  color: #e9eee9;
+  padding: 8px 0;
+  font-size: 12px;
+}
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: max-content;
+}
+.logo {
+  width: 56px;
+  height: 56px;
+  background: #050505;
+  border: 1px solid #b98218;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.brand-name {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.brand-name small {
+  display: block;
+  color: var(--green2);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+.navlinks {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.navlinks a:hover { color: var(--green2); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .2s;
+}
+.btn-green { background: var(--green); color: white; }
+.btn-green:hover {
+  background: var(--green2);
+  transform: translateY(-2px);
+}
+.btn-lime { background: var(--lime); color: #17271b; }
+.btn-outline {
+  border: 1px solid #ffffff70;
+  color: white;
+  background: transparent;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* زمینه سبز چرمی زیر هدر */
+.hero {
+  background-color: #092d20;
+  background-image:
+    radial-gradient(ellipse at 18% 22%, rgba(39,91,62,.42), transparent 42%),
+    radial-gradient(ellipse at 82% 78%, rgba(3,19,13,.48), transparent 48%),
+    repeating-linear-gradient(112deg, rgba(255,255,255,.018) 0px, rgba(255,255,255,.018) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(7deg, rgba(0,0,0,.06) 0px, rgba(0,0,0,.06) 1px, transparent 1px, transparent 5px),
+    linear-gradient(135deg, #123e2b, #092d20 52%, #061f16);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  border: 1px solid #ffffff16;
+  border-radius: 50%;
+  left: -120px;
+  top: -220px;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px solid #ffffff16;
+  border-radius: 50%;
+  left: -35px;
+  top: -135px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 55px;
+  align-items: center;
+  min-height: 570px;
+  padding: 65px 0;
+  position: relative;
+  z-index: 1;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: var(--lime);
+  font-weight: 700;
+}
+.eyebrow:before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: var(--lime);
+}
+h1 {
+  font-size: clamp(35px, 4.2vw, 58px);
+  line-height: 1.5;
+  margin: 20px 0;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+h1 span { color: var(--lime); }
+.hero p {
+  color: #d4e1d8;
+  font-size: 15px;
+  max-width: 540px;
+  line-height: 2.2;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 29px;
+}
+.hero-points {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+  color: #e5eee7;
+  font-size: 12px;
+}
+.hero-points span:before {
+  content: "✓";
+  color: var(--lime);
+  margin-left: 8px;
+  font-weight: 900;
+}
+
+/* جایگاه لوگوی اصلی */
+.hero-visual {
+  height: 430px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-photo.logo-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+.hero-photo.logo-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+  mix-blend-mode: screen;
+}
+.hero-photo.logo-display .photo-label {
+  display: none;
+}
+
+.stats {
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 25px 0;
+}
+.stat {
+  padding: 7px 24px;
+  border-left: 1px solid var(--line);
+}
+.stat:last-child { border: 0; }
+.stat strong {
+  font-size: 22px;
+  color: var(--green);
+  display: block;
+}
+.stat span { font-size: 12px; color: var(--muted); }
+
+section { padding: 90px 0; }
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+.section-head h2 {
+  font-size: clamp(26px, 3vw, 37px);
+  line-height: 1.5;
+  margin: 10px 0;
+  font-weight: 900;
+}
+.section-head p {
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 480px;
+  margin: 0;
+}
+.kicker {
+  font-size: 12px;
+  color: var(--green2);
+  font-weight: 800;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.product {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .25s;
+}
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px #153c2510;
+}
+.product-img {
+  height: 255px;
+  position: relative;
+  overflow: hidden;
+  background: #e4e8df;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .4s;
+}
+.product:hover .product-img img { transform: scale(1.04); }
+.product-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.product-body { padding: 22px; }
+.product-body h3 { font-size: 19px; margin: 0 0 8px; }
+.product-body p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 17px;
+  min-height: 48px;
+}
+.product-foot {
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #edf4eb;
+  color: var(--green);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.about { background: #edf2eb; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.about-visual { height: 440px; position: relative; }
+.about-visual img {
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.about-stamp {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  background: var(--green);
+  color: white;
+  padding: 22px;
+  border-radius: 12px;
+  width: 190px;
+}
+.about-stamp b {
+  display: block;
+  font-size: 22px;
+  color: var(--lime);
+}
+.about-copy h2 {
+  font-size: 35px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.about-copy > p { color: var(--muted); font-size: 14px; }
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 28px;
+}
+.feature { display: flex; gap: 12px; align-items: start; }
+.feature-icon {
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 10px;
+  background: white;
+  color: var(--green);
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
+.feature b { font-size: 13px; display: block; }
+.feature small { font-size: 11px; color: var(--muted); }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.process {
+  border: 1px solid var(--line);
+  padding: 27px;
+  border-radius: 13px;
+  background: white;
+}
+.process-num {
+  font-size: 32px;
+  color: var(--green2);
+  font-weight: 900;
+  opacity: .7;
+}
+.process h3 { font-size: 17px; margin: 8px 0; }
+.process p { font-size: 12px; color: var(--muted); margin: 0; }
+
+.cta {
+  background: var(--black);
+  color: white;
+  padding: 55px 0;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.cta h2 { font-size: clamp(23px, 3vw, 34px); margin: 0; }
+.cta p { color: #bfc9c1; font-size: 13px; margin: 8px 0 0; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 50px;
+}
+.contact-copy h2 {
+  font-size: 34px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+.contact-copy p { font-size: 13px; color: var(--muted); }
+.contact-item {
+  display: flex;
+  gap: 14px;
+  margin-top: 25px;
+  align-items: center;
+}
+.contact-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 11px;
+  background: #e8f0e5;
+  color: var(--green);
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
+.contact-item small { display: block; color: var(--muted); font-size: 11px; }
+.contact-item b { font-size: 14px; }
+
+.contact-form {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 30px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 12px; font-weight: 700; }
+.field input, .field select, .field textarea {
+  width: 100%;
+  border: 1px solid #dfe5dc;
+  border-radius: 8px;
+  background: #fafbf9;
+  padding: 12px;
+  outline: none;
+  font-size: 13px;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--green2);
+}
+.field textarea { resize: vertical; min-height: 100px; }
+.form-note { font-size: 11px; color: var(--muted); margin-top: 12px; }
+
+footer {
+  background: #0c110e;
+  color: white;
+  padding: 45px 0 20px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ffffff20;
+}
+.footer-desc { font-size: 12px; color: #b7c1ba; max-width: 330px; }
+.footer-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #d4ddd6;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  font-size: 11px;
+  color: #9ba79e;
+}
+.toast {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 50;
+  background: var(--green);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px #0002;
+  display: none;
+  font-size: 13px;
+  max-width: 90%;
+}
+
+@media(max-width:850px) {
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    left: 0;
+    background: white;
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .navlinks.open { display: flex; }
+  .menu-toggle { display: block; }
+  .nav > .btn { display: none; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 0;
+  }
+  .hero-visual { height: 340px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; row-gap: 20px; }
+  .stat:nth-child(2) { border-left: 0; }
+  .products { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-visual { height: 370px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media(max-width:560px) {
+  .topbar .container { justify-content: center; text-align: center; }
+  .topbar .container span:last-child { display: none; }
+  .brand-name { font-size: 15px; }
+  .logo { width: 48px; height: 48px; }
+  .hero-grid { min-height: unset; }
+  .hero-visual { height: 290px; }
+  h1 { font-size: 34px; }
+  .hero p { font-size: 13px; }
+  .hero-points { gap: 12px; }
+  .stats-grid { padding: 20px 0; }
+  .stat { padding: 5px 12px; }
+  section { padding: 62px 0; }
+  .section-head { align-items: start; flex-direction: column; gap: 12px; }
+  .products { grid-template-columns: 1fr; }
+  .product-img { height: 270px; }
+  .about-visual { height: 300px; }
+  .about-stamp { width: 150px; padding: 14px; }
+  .features { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .cta-inner { align-items: start; flex-direction: column; }
+  .contact-form { padding: 20px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field.full { grid-column: auto; }
+  .footer-top { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>کسرا درب مرند گستر | کیفیت، امنیت و طراحی</span>
+    <span>مشاوره تخصصی برای انتخاب درب مناسب ساختمان</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="صفحه اصلی کسرا درب">
+      <span class="logo">
+        <img src="4c679686-5ce0-44b0-924e-6ea59caa1d07.png" alt="لوگوی کسرا درب">
+      </span>
+      <span class="brand-name">کسرا درب<small>مرند گستر</small></span>
+    </a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">صفحه اصلی</a>
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#process">خدمات ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+
+    <a class="btn btn-green" href="#contact">استعلام قیمت ↗</a>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="باز کردن منو" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">امنیت، با طراحی ماندگار</div>
+      <h1>اولین انتخاب برای<br><span>درب‌های مطمئن</span> و مدرن</h1>
+      <p>در کسرا درب مرند گستر، امنیت و زیبایی در کنار هم قرار می‌گیرند. برای انتخاب درب متناسب با پروژه ساختمانی خود، از مشاوره تخصصی ما استفاده کنید.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-lime" href="#products">مشاهده محصولات <span>←</span></a>
+        <a class="btn btn-outline" href="#contact">درخواست مشاوره</a>
+      </div>
+
+      <div class="hero-points">
+        <span>طراحی به‌روز</span>
+        <span>انتخاب متنوع</span>
+        <span>مشاوره تخصصی</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-photo logo-display">
+        <img src="4c679686-5ce0-44b0-924e-6ea59caa1d07.png"
+          alt="لوگوی طلایی کسرا درب مرند گستر"
+          fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong>امنیت</strong><span>اولویت در انتخاب محصول</span></div>
+    <div class="stat"><strong>تنوع</strong><span>مدل‌های متناسب با نیاز</span></div>
+    <div class="stat"><strong>مشاوره</strong><span>راهنمایی پیش از خرید</span></div>
+    <div class="stat"><strong>کیفیت</strong><span>توجه به جزئیات ساخت</span></div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker">محصولات ما</div>
+        <h2>درب مناسب پروژه شما</h2>
+      </div>
+      <p>از درب ورودی ساختمان تا راهکارهای تخصصی؛ محصول مناسب را با توجه به نوع کاربری، طراحی و نیاز پروژه انتخاب کنید.</p>
+    </div>
+
+    <div class="products">
+      <article class="product">
+        <div class="product-img">
+          <img src="photo_2026-10-22_00-24-54.jpg" alt="درب ورودی با طراحی مدرن" loading="lazy">
+          <span class="product-tag">پرفروش</span>
+        </div>
+        <div class="product-body">
+          <h3>درب ضدسرقت</h3>
+          <p>انتخابی برای ورودی واحدهای مسکونی با تمرکز بر امنیت، دوام و ظاهر هماهنگ با دکوراسیون.</p>
+          <div class="product-foot">
+            <span>دریافت مشخصات محصول</span>
+            <a class="arrow" href="#contact" aria-label="استعلام درب ضدسرقت">←</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="photo_2026-10-22_00-32-48.jpg" alt="طراحی داخلی مدرن و درب" loading="lazy">
+          <span class="product-tag">ساختمانی</span>
+        </div>
+        <div class="product-body">
+          <h3>درب ضدحریق</h3>
+          <p>برای پروژه‌هایی که به درب متناسب با الزامات ایمنی و مشخصات فنی تأییدشده نیاز دارند.</p>
+          <div class="product-foot">
+            <span>دریافت مشخصات محصول</span>
+            <a class="arrow" href="#contact" aria-label="استعلام درب ضدحریق">←</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="images.jpg" alt="ورودی خانه با طراحی مینیمال" loading="lazy">
+          <span class="product-tag">طراحی مدرن</span>
+        </div>
+        <div class="product-body">
+          <h3>درب سفارشی و مدرن</h3>
+          <p>انتخاب مدل و ظاهر متناسب با سبک معماری، ابعاد ورودی و نیازهای پروژه ساختمانی.</p>
+          <div class="product-foot">
+            <span>ثبت درخواست سفارشی</span>
+            <a class="arrow" href="#contact" aria-label="استعلام درب سفارشی">←</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85" alt="معماری معاصر با متریال باکیفیت" loading="lazy">
+      <div class="about-stamp">
+        <b>کسرا درب</b>
+        <span>مرند گستر</span>
+        <div style="font-size:11px;color:#d7e5d9;margin-top:8px">انتخابی متناسب با معماری امروز</div>
+      </div>
+    </div>
+
+    <div class="about-copy">
+      <div class="kicker">درباره کسرا درب</div>
+      <h2>امنیت یک انتخاب است؛<br>کیفیت یک تعهد</h2>
+      <p>ما در کسرا درب مرند گستر تلاش می‌کنیم مسیر انتخاب درب مناسب را روشن‌تر کنیم؛ از شناخت نیاز پروژه و بررسی مشخصات محصول تا راهنمایی برای انتخابی هماهنگ با معماری ساختمان.</p>
+
+      <div class="features">
+        <div class="feature"><div class="feature-icon">⌂</div><div><b>طراحی هماهنگ</b><small>متناسب با فضای معماری</small></div></div>
+        <div class="feature"><div class="feature-icon">◇</div><div><b>انتخاب آگاهانه</b><small>بر پایه مشخصات فنی</small></div></div>
+        <div class="feature"><div class="feature-icon">✓</div><div><b>پاسخ‌گویی</b><small>راهنمایی در مسیر خرید</small></div></div>
+        <div class="feature"><div class="feature-icon">▤</div><div><b>تنوع محصول</b><small>برای نیازهای متفاوت</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker">مسیر همکاری</div>
+        <h2>از نیاز شما تا انتخاب نهایی</h2>
+      </div>
+      <p>فرایندی روشن برای بررسی نیاز، دریافت اطلاعات و انتخاب محصول متناسب با پروژه.</p>
+    </div>
+
+    <div class="process-grid">
+      <article class="process">
+        <div class="process-num">۰۱</div>
+        <h3>ثبت درخواست</h3>
+        <p>نوع درب، کاربری و اطلاعات اولیه پروژه را برای ما ارسال کنید.</p>
+      </article>
+      <article class="process">
+        <div class="process-num">۰۲</div>
+        <h3>بررسی و مشاوره</h3>
+        <p>مشخصات و گزینه‌های مناسب برای نیاز پروژه شما بررسی می‌شوند.</p>
+      </article>
+      <article class="process">
+        <div class="process-num">۰۳</div>
+        <h3>استعلام و هماهنگی</h3>
+        <p>برای دریافت قیمت و هماهنگی مراحل بعدی با شما تماس گرفته می‌شود.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>برای پروژه بعدی‌تان آماده‌اید؟</h2>
+      <p>نیاز خود را با ما مطرح کنید تا برای انتخاب درب مناسب راهنمایی شوید.</p>
+    </div>
+    <a href="#contact" class="btn btn-lime">درخواست استعلام قیمت ←</a>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <div class="kicker">تماس با ما</div>
+      <h2>بیایید درباره پروژه شما صحبت کنیم</h2>
+      <p>فرم را تکمیل کنید تا اطلاعات درخواست شما برای پیگیری آماده شود. راه‌های ارتباطی رسمی شرکت را پیش از انتشار در این قسمت وارد کنید.</p>
+
+      <div class="contact-item">
+        <div class="contact-icon">☎</div>
+        <div><small>شماره تماس شرکت</small><b>شماره رسمی را وارد کنید</b></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">⌖</div>
+        <div><small>نشانی شرکت</small><b>آدرس رسمی را وارد کنید</b></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">◷</div>
+        <div><small>ساعات پاسخ‌گویی</small><b>با هماهنگی قبلی</b></div>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">نام و نام خانوادگی *</label>
+          <input id="name" name="name" placeholder="نام شما" required>
+        </div>
+        <div class="field">
+          <label for="phone">شماره تماس *</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="09xxxxxxxxx" required>
+        </div>
+        <div class="field">
+          <label for="type">نوع محصول</label>
+          <select id="type" name="type">
+            <option>درب ضدسرقت</option>
+            <option>درب ضدحریق</option>
+            <option>درب سفارشی</option>
+            <option>سایر محصولات</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="project">نوع پروژه</label>
+          <select id="project" name="project">
+            <option>ساختمان مسکونی</option>
+            <option>پروژه تجاری</option>
+            <option>پروژه اداری</option>
+            <option>خرید شخصی</option>
+            <option>سایر</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">توضیحات درخواست</label>
+          <textarea id="message" name="message" placeholder="تعداد، ابعاد تقریبی یا توضیحات پروژه..."></textarea>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-green" style="width:100%">ثبت درخواست مشاوره ←</button>
+        </div>
+      </div>
+      <p class="form-note">توجه: در نسخه نمایشی، اطلاعات فرم به سرور ارسال نمی‌شود. برای دریافت واقعی سفارش‌ها باید فرم به سامانه یا ایمیل شرکت متصل شود.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#home">
+          <span class="logo">
+            <img src="4c679686-5ce0-44b0-924e-6ea59caa1d07.png" alt="لوگوی کسرا درب مرند گستر">
+          </span>
+          <span class="brand-name">کسرا درب<small>مرند گستر</small></span>
+        </a>
+        <p class="footer-desc">کسرا درب مرند گستر؛ همراه شما در انتخاب درب‌های ساختمانی با تمرکز بر طراحی، امنیت و مشخصات فنی.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#products">محصولات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© کسرا درب مرند گستر</span>
+      <span>طراحی مدرن | سبز، سفید و مشکی</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navlinks = document.getElementById('navlinks');
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = navlinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.textContent = isOpen ? '×' : '☰';
+});
+
+navlinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  });
+});
+
+const form = document.getElementById('contactForm');
+const toast = document.getElementById('toast');
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const data = new FormData(form);
+  const name = String(data.get('name') || '').trim();
+  const phone = String(data.get('phone') || '').trim();
+
+  if (!name || !phone) {
+    showToast('لطفاً نام و شماره تماس را وارد کنید.');
+    return;
+  }
+
+  showToast('فرم نمایشی تکمیل شد؛ برای ارسال واقعی باید به سامانه دریافت سفارش متصل شود.');
+});
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.style.display = 'block';
+
+  clearTimeout(window.toastTimeout);
+
+  window.toastTimeout = setTimeout(() => {
+    toast.style.display = 'none';
+  }, 5000);
+}
+</script>
+
+</body>
+</html>

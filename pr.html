@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARK KING | فروشگاه استریت‌ویر</title>
+  <link rel="stylesheet" href="index.html">
+  <style>
+    :root {
+      --gold: #d4af65;
+      --bg: #0a0a0a;
+      --card: #151515;
+      --muted: #999;
+      --white: #f5f3ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--white);
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .announcement {
+      padding: 10px;
+      text-align: center;
+      background: var(--gold);
+      color: #111;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    header {
+      height: 76px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid #282828;
+      position: sticky;
+      top: 0;
+      background: #0a0a0af2;
+      z-index: 5;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    nav { display: flex; gap: 24px; }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    nav a:hover { color: var(--gold); }
+
+    .cart-btn, .gold-btn {
+      background: var(--gold);
+      color: #111;
+      border: none;
+      padding: 12px 17px;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    .hero {
+      min-height: 490px;
+      padding: 65px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(270deg, #080808 0%, #080808e8 40%, #08080833 100%),
+        url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content { max-width: 570px; }
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.4;
+      margin: 15px 0;
+    }
+
+    h1 span { color: var(--gold); }
+    .hero p { color: #ccc; line-height: 2.1; max-width: 460px; }
+    .hero .gold-btn { margin-top: 15px; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-block: 1px solid #282828;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 24px 10px;
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .feature b {
+      display: block;
+      color: var(--gold);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      padding: 65px 6%;
+      scroll-margin-top: 85px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    h2 { font-size: 27px; margin: 0 0 10px; }
+    .sub { color: var(--muted); font-size: 13px; }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .filters input, .filters select {
+      background: #151515;
+      color: white;
+      border: 1px solid #333;
+      padding: 12px;
+      border-radius: 3px;
+      min-width: 150px;
+      outline-color: var(--gold);
+    }
+
+    .filters input { flex: 1; }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .chip {
+      padding: 9px 16px;
+      background: transparent;
+      color: #bbb;
+      border: 1px solid #333;
+      border-radius: 2px;
+    }
+
+    .chip.active, .chip:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product {
+      background: var(--card);
+      border: 1px solid #222;
+      min-width: 0;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+      border-color: #78643c;
+    }
+
+    .product-img {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: #202020;
+    }
+
+    .product-img img {
+      width: 100%;
+      aspect-ratio: 3 / 3.6;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s;
+    }
+
+    .product:hover img { transform: scale(1.04); }
+
+    .tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--gold);
+      color: #111;
+      padding: 6px 9px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .product-info { padding: 15px; }
+    .product-info h3 { font-size: 14px; margin: 0 0 12px; }
+    .product-info p { color: var(--muted); font-size: 12px; }
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .price { color: var(--gold); font-weight: bold; font-size: 14px; }
+    .old-price {
+      color: #777;
+      text-decoration: line-through;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .small-btn {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid #695733;
+      padding: 9px 11px;
+      font-size: 12px;
+    }
+
+    .small-btn:hover { background: var(--gold); color: #111; }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 40px;
+      color: #aaa;
+    }
+
+    .banner {
+      margin: 0 6% 55px;
+      padding: 45px 6%;
+      border: 1px solid #4a3d24;
+      background: linear-gradient(110deg, #17130c, #111);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .banner h2 { color: var(--gold); }
+    .banner p { color: #aaa; line-height: 2; }
+
+    footer {
+      padding: 35px 6%;
+      border-top: 1px solid #282828;
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+      color: #888;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    footer strong { color: var(--gold); }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #000b;
+      z-index: 20;
+    }
+
+    .overlay.show { display: block; }
+
+    .drawer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: min(430px, 100%);
+      overflow-y: auto;
+      padding: 25px;
+      background: #111;
+      border-right: 1px solid #333;
+    }
+
+    .drawer-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+      padding-bottom: 18px;
+    }
+
+    .close {
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 25px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 13px;
+      padding: 18px 0;
+      border-bottom: 1px solid #292929;
+    }
+
+    .cart-item img {
+      width: 75px;
+      height: 90px;
+      object-fit: cover;
+    }
+
+    .cart-item-info { flex: 1; }
+    .cart-item-info h4 { margin: 4px 0 10px; font-size: 13px; }
+    .cart-item-info p { color: var(--gold); font-size: 13px; }
+
+    .qty {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .qty button {
+      width: 27px;
+      height: 27px;
+      background: #222;
+      color: white;
+      border: 1px solid #444;
+    }
+
+    .remove {
+      background: none;
+      border: none;
+      color: #d88;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 22px 0;
+      font-weight: bold;
+    }
+
+    .full { width: 100%; }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #000d;
+      z-index: 30;
+      overflow-y: auto;
+      padding: 25px 12px;
+    }
+
+    .modal.show { display: grid; place-items: center; }
+
+    .modal-box {
+      width: min(760px, 100%);
+      background: #141414;
+      border: 1px solid #383024;
+      padding: 25px;
+      position: relative;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .detail-grid img {
+      width: 100%;
+      max-height: 470px;
+      object-fit: cover;
+    }
+
+    .detail-grid h2 { margin: 20px 0; }
+    .detail-grid p { color: #aaa; line-height: 2; font-size: 13px; }
+
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+    }
+
+    .size-btn {
+      background: transparent;
+      color: white;
+      border: 1px solid #444;
+      min-width: 40px;
+      padding: 10px;
+    }
+
+    .size-btn.selected {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      right: 50%;
+      transform: translateX(50%);
+      background: var(--gold);
+      color: #111;
+      padding: 14px 22px;
+      z-index: 50;
+      display: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .toast.show { display: block; }
+
+    @media (max-width: 950px) {
+      .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      nav { gap: 12px; }
+    }
+
+    @media (max-width: 650px) {
+      header { padding: 0 4%; height: 68px; }
+      nav { display: none; }
+      .logo { font-size: 19px; }
+      .cart-btn { padding: 10px; font-size: 12px; }
+      .hero { min-height: 420px; padding: 45px 6%; }
+      .features { grid-template-columns: 1fr; }
+      .feature { padding: 15px; border-bottom: 1px solid #222; }
+      .section { padding: 45px 4%; }
+      .products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .product-info { padding: 11px; }
+      .product-info h3 { font-size: 12px; }
+      .price-row { align-items: flex-start; flex-direction: column; }
+      .banner { margin: 0 4% 40px; padding: 28px 20px; flex-direction: column; align-items: flex-start; }
+      .detail-grid { grid-template-columns: 1fr; }
+      .detail-grid img { max-height: 330px; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">کالکشن جدید DARK KING — استایل خودت رو بساز</div>
+
+  <header>
+    <a href="#" class="logo" style="text-decoration:none">♛ DARK KING</a>
+    <nav>
+      <a href="#home">صفحه اصلی</a>
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+    </nav>
+    <button class="cart-btn" onclick="openCart()">
+      سبد خرید <span id="cartCount">۰</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">DARK KING / NEW COLLECTION</div>
+        <h1>قانون خودت رو<br><span>تعریف کن.</span></h1>
+        <p>
+          برای کسانی که معمولی بودن رو انتخاب نمی‌کنن.
+          کالکشن اختصاصی استریت‌ویر با طراحی جسورانه و جزئیات متفاوت.
+        </p>
+        <button class="gold-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+          مشاهده محصولات ←
+        </button>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><b>✦</b>طراحی خاص و متفاوت</div>
+      <div class="feature"><b>♛</b>استایل مخصوص تو</div>
+      <div class="feature"><b>◇</b>انتخاب با کیفیت</div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-head">
+        <div>
+          <h2>کالکشن <span style="color:var(--gold)">ما</span></h2>
+          <div class="sub">انتخاب کن، ترکیب کن، متفاوت باش.</div>
+        </div>
+        <div class="sub" id="resultCount"></div>
+      </div>
+
+      <div class="filters">
+        <input id="search" type="search" placeholder="جست‌وجوی محصول..." oninput="renderProducts()">
+        <select id="sort" onchange="renderProducts()">
+          <option value="default">مرتب‌سازی پیش‌فرض</option>
+          <option value="low">ارزان‌ترین</option>
+          <option value="high">گران‌ترین</option>
+        </select>
+      </div>
+
+      <div class="chips">
+        <button class="chip active" data-cat="همه" onclick="setCategory('همه',this)">همه محصولات</button>
+        <button class="chip" data-cat="هودی" onclick="setCategory('هودی',this)">هودی</button>
+        <button class="chip" data-cat="تیشرت" onclick="setCategory('تیشرت',this)">تیشرت</button>
+        <button class="chip" data-cat="شلوار" onclick="setCategory('شلوار',this)">شلوار</button>
+        <button class="chip" data-cat="اکسسوری" onclick="setCategory('اکسسوری',this)">اکسسوری</button>
+      </div>
+
+      <div class="products" id="productGrid"></div>
+    </section>
+
+    <section class="banner" id="about">
+      <div>
+        <div class="eyebrow">YOUR STYLE. YOUR RULES.</div>
+        <h2>متفاوت بودن انتخاب توست.</h2>
+        <p>به دنیای DARK KING خوش آمدی؛ جایی برای استایل‌های جسورانه.</p>
+      </div>
+      <button class="gold-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        خرید کالکشن
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong class="logo">DARK KING</strong><br>قدرت در انتخاب توست.</div>
+    <div>فروشگاه نمونه‌کار<br> سازندهayhan· سفارش واقعی فعال نیست</div>
+    <div>© 2026 DARK KING<br>تمام حقوق محفوظ است.</div>
+  </footer>
+
+  <div class="overlay" id="cartOverlay" onclick="overlayClose(event,'cartOverlay')">
+    <aside class="drawer">
+      <div class="drawer-head">
+        <h3>سبد خرید تو</h3>
+        <button class="close" onclick="closeCart()">×</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-total">
+        <span>مجموع سبد</span>
+        <span id="cartTotal">۰ تومان</span>
+      </div>
+      <button class="gold-btn full" onclick="checkout()">ادامه سفارش</button>
+      <p class="sub">این نسخه نمایشی است و پرداخت واقعی ندارد.</p>
+    </aside>
+  </div>
+
+  <div class="modal" id="detailModal" onclick="if(event.target===this)closeDetail()">
+    <div class="modal-box">
+      <button class="close" onclick="closeDetail()" style="position:absolute;left:18px;top:12px">×</button>
+      <div class="detail-grid" id="detailContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const products = [
+      {
+        id: 1, name: "هودی اورسایز سفید", category: "هودی",
+        price: 1250000, oldPrice: 1490000, tag: "پرفروش",
+        image: "https://tipnety.com/storage/media/cHTPosgqBJmtYpAycumz0hsVR226xpzZGNMg0u9a.jpg",
+        desc: "هودی اورسایز با استایل خیابانی، طراحی مینیمال و مناسب استفاده روزمره.",
+        sizes: ["M","L","XL","XXL"]
+      },
+      {
+        id: 2, name: "تیشرت کلاسیک سفید", category: "تیشرت",
+        price: 490000, oldPrice: 0, tag: "جدید",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCTj9dKHLNnpQy6iqzF4lMX1cxxGJAUT7weXyMN80zbw&s=10",
+        desc: "تیشرت کلاسیک با برش راحت و ظاهر ساده برای ست کردن با انواع استایل.",
+        sizes: ["S","M","L","XL"]
+      },
+      {
+        id: 3, name: "هودی استریت گرافیکی", category: "هودی",
+        price: 1390000, oldPrice: 0, tag: "",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_doQo4HPIfsupUtqWTKbdJN7Z_0jh6pxDiwWVWK2WAw&s=10",
+        desc: "طراحی الهام‌گرفته از فرهنگ استریت‌ویر برای استایل‌های متفاوت.",
+        sizes: ["M","L","XL"]
+      },
+      {
+        id: 4, name: "شلوار کارگو ", category: "شلوار",
+        price: 980000, oldPrice: 1150000, tag: "تخفیف",
+        image: "https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=700&q=80",
+        desc: "شلوار کارگو با فرم آزاد و جیب‌های کاربردی برای استایل روزمره.",
+        sizes: ["M","L","XL","XXL"]
+      },
+      {
+        id: 5, name: "تیشرت اورسایز مشکی", category: "تیشرت",
+        price: 520000, oldPrice: 0, tag: "",
+        image: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=80",
+        desc: "تیشرت روشن و راحت برای ترکیب با شلوارهای تیره و استایل مینیمال.",
+        sizes: ["S","M","L","XL"]
+      },
+      {
+        id: 6, name: "شلوار استریت‌ویر", category: "شلوار",
+        price: 890000, oldPrice: 0, tag: "",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMsLsW1lAslxM8GI2pQv2ugdPMmI_AT2W_lBMu4bN_Dw&s=10",
+        desc: "فرم مدرن با آزادی حرکت مناسب استفاده روزانه.",
+        sizes: ["M","L","XL"]
+      },
+      {
+        id: 7, name: "کلاه بیسبالی کینگ", category: "اکسسوری",
+        price: 350000, oldPrice: 0, tag: "جدید",
+        image: ",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8V2bmRhx1yUZyfY4-9NdmVguKmirg4oFLKrJJkLT34g&s=10",
+        desc: "اکسسوری ساده برای تکمیل استایل خیابانی.",
+        sizes: ["Free"]
+      },
+      {
+        id: 8, name: "هودی پریمیوم", category: "هودی",
+        price: 1590000, oldPrice: 0, tag: "",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwI9GvhG4ZBlmMh2DeZa0gSj5bBGx-aUB-zMaLpUyKYA&s=10",
+        desc: "هودی با طراحی مدرن و فرم راحت برای استایل روزمره.",
+        sizes: ["M","L","XL","XXL"]
+      }
+    ];
+
+    const fa = n => n.toLocaleString("fa-IR");
+    let category = "همه";
+    let cart = [];
+    let activeProduct = null;
+    let selectedSize = null;
+
+    function renderProducts() {
+      const query = document.getElementById("search").value.trim().toLowerCase();
+      const sort = document.getElementById("sort").value;
+
+      let list = products.filter(p =>
+        (category === "همه" || p.category === category) &&
+        (p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query))
+      );
+
+      if (sort === "low") list.sort((a,b) => a.price - b.price);
+      if (sort === "high") list.sort((a,b) => b.price - a.price);
+
+      document.getElementById("resultCount").textContent =
+        fa(list.length) + " محصول";
+
+      document.getElementById("productGrid").innerHTML = list.length
+        ? list.map(p => `
+          <article class="product">
+            <div class="product-img" onclick="openDetail(${p.id})">
+              <img src="${p.image}" alt="${p.name}" loading="lazy">
+              ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
+            </div>
+            <div class="product-info">
+              <h3>${p.name}</h3>
+              <p>${p.category} · DARK KING</p>
+              <div class="price-row">
+                <div>
+                  <div class="price">${fa(p.price)} تومان</div>
+                  ${p.oldPrice ? `<div class="old-price">${fa(p.oldPrice)} تومان</div>` : ""}
+                </div>
+                <button class="small-btn" onclick="openDetail(${p.id})">مشاهده</button>
+              </div>
+            </div>
+          </article>
+        `).join("")
+        : '<div class="empty">محصولی با این مشخصات پیدا نشد.</div>';
+    }
+
+    function setCategory(cat, button) {
+      category = cat;
+      document.querySelectorAll(".chip").forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
+      renderProducts();
+    }
+
+    function openDetail(id) {
+      activeProduct = products.find(p => p.id === id);
+      selectedSize = activeProduct.sizes[0];
+
+      document.getElementById("detailContent").innerHTML = `
+        <img src="${activeProduct.image}" alt="${activeProduct.name}">
+        <div>
+          <div class="eyebrow">DARK KING COLLECTION</div>
+          <h2>${activeProduct.name}</h2>
+          <div class="price">${fa(activeProduct.price)} تومان</div>
+          <p>${activeProduct.desc}</p>
+          <strong>انتخاب سایز</strong>
+          <div class="sizes">
+            ${activeProduct.sizes.map((s,i) => `
+              <button class="size-btn ${i===0?'selected':''}"
+                onclick="selectSize('${s}',this)">${s}</button>
+            `).join("")}
+          </div>
+          <button class="gold-btn full" onclick="addToCart(${activeProduct.id},selectedSize)">
+            افزودن به سبد خرید
+          </button>
+        </div>
+      `;
+      document.getElementById("detailModal").classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function selectSize(size, button) {
+      selectedSize = size;
+      document.querySelectorAll(".size-btn").forEach(b => b.classList.remove("selected"));
+      button.classList.add("selected");
+    }
+
+    function closeDetail() {
+      document.getElementById("detailModal").classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function addToCart(id, size) {
+      const p = products.find(p => p.id === id);
+      const existing = cart.find(i => i.id === id && i.size === size);
+
+      if (existing) existing.qty++;
+      else cart.push({id, size, qty:1});
+
+      updateCart();
+      closeDetail();
+      showToast("محصول به سبد خرید اضافه شد");
+    }
+
+    function updateCart() {
+      const count = cart.reduce((sum,i) => sum + i.qty, 0);
+      const total = cart.reduce((sum,i) => {
+        return sum + products.find(p => p.id === i.id).price * i.qty;
+      },0);
+
+      document.getElementById("cartCount").textContent = fa(count);
+      document.getElementById("cartTotal").textContent = fa(total) + " تومان";
+
+      document.getElementById("cartItems").innerHTML = cart.length
+        ? cart.map(i => {
+          const p = products.find(p => p.id === i.id);
+          return `
+            <div class="cart-item">
+              <img src="${p.image}" alt="${p.name}">
+              <div class="cart-item-info">
+                <h4>${p.name}</h4>
+                <div class="sub">سایز: ${i.size}</div>
+                <p>${fa(p.price)} تومان</p>
+                <div class="qty">
+                  <button onclick="changeQty(${i.id},'${i.size}',1)">+</button>
+                  <span>${fa(i.qty)}</span>
+                  <button onclick="changeQty(${i.id},'${i.size}',-1)">−</button>
+                </div>
+                <button class="remove" onclick="removeItem(${i.id},'${i.size}')">حذف محصول</button>
+              </div>
+            </div>`;
+        }).join("")
+        : '<div class="empty">سبد خریدت هنوز خالیه.</div>';
+    }
+
+    function changeQty(id, size, delta) {
+      const item = cart.find(i => i.id === id && i.size === size);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) removeItem(id,size);
+      else updateCart();
+    }
+
+    function removeItem(id,size) {
+      cart = cart.filter(i => !(i.id === id && i.size === size));
+      updateCart();
+    }
+
+    function openCart() {
+      updateCart();
+      document.getElementById("cartOverlay").classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCart() {
+      document.getElementById("cartOverlay").classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function overlayClose(event,id) {
+      if (event.target.id === id) closeCart();
+    }
+
+    function checkout() {
+      if (!cart.length) {
+        showToast("سبد خرید خالی است");
+        return;
+      }
+      showToast("سازندهayhan");
+      
+    }
+
+    let toastTimer;
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"),2500);
+    }
+
+    renderProducts();
+    updateCart();
+  </script>
+</body>
+</html>
